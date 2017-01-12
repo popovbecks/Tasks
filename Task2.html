@@ -5,17 +5,36 @@
     <title>Document</title>
 </head>
 <body>
+    <input type="file" onchange="previewFile()" id="text">
     //задача 1
     <script>
-    //задача 2
-    function createNameList (string) {
+    //задача 
+     function previewFile() { var reader = new FileReader();
+       var str = "";
+        reader.onloadend = function () {
+         str = reader.result; 
+           createNameList (str);
+        //  console.log("Содержимое файла: " + str);
+        return str;
+          }
+          var file = document.getElementById("text");
+           reader.readAsText(file.files[0]);
+            }
+    
+    function createNameList (str) {
         
-        var mas = string.split(" ")
-        var names = mas.sort();
-        console.log(names);
+        var mas = str.split(" ")
+         var names = mas.sort();
+        for(i=0;i < names.length;i++) {
+            if(names[i].charAt(0).match(/[A-Z]/)) {
+                alert(names[i]);
+            }
+        }
+        
 
     }
-    createNameList ("Alex Popov Draxler");
+    
+  
     </script>
 </body>
 </html>
