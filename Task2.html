@@ -8,12 +8,14 @@
     <input type="file" onchange="previewFile()" id="text">
     //задача 1
     <script>
-    //задача 
-     function previewFile() { var reader = new FileReader();
-       var str = "";
+    //задача 2 
+    //Подключается файл text.txt
+     function previewFile() { 
+        var reader = new FileReader();
+        var str = "";
         reader.onloadend = function () {
          str = reader.result; 
-           createNameList (str);
+         createNameList (str);
         //  console.log("Содержимое файла: " + str);
         return str;
           }
