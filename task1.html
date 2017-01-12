@@ -9,7 +9,7 @@
    //Задача 1
 
    //Задача 2
-   
+   var p = +prompt('Введите точность',4);
    function pow(x, n) {
   if (n != 1) { // пока n != 1, сводить вычисление pow(x,n) к pow(x,n-1)
     return x * pow(x, n - 1);
@@ -28,7 +28,7 @@ function f(n) {
        sum++;
        
    }
-   var fix = sum.toFixed (5);
+   var fix = sum.toFixed (p);
    alert(fix);
    
    
