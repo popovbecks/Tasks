@@ -5,6 +5,34 @@
     <title>Document</title>
 </head>
 <body>
+   <script>
+   //Задача 2
+   
+   function pow(x, n) {
+  if (n != 1) { // пока n != 1, сводить вычисление pow(x,n) к pow(x,n-1)
+    return x * pow(x, n - 1);
+  } else {
+    return x;
+  }
+};
+function f(n) {
+  return n ? n * f(n - 1) : 1;
+};
+
+   for (n = 1; n < 5;n++) {
+       var x = -2;
+      var fact = f(n);
+       var sum = pow (x, n)/pow (fact, n);
+       sum++
+       
+   }
+   alert(sum);
+   
+
+
+
     
+    var alg = 
+   </script> 
 </body>
 </html>
