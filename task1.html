@@ -5,11 +5,28 @@
     <title>Document</title>
 </head>
 <body>
-   <script>
-   //Задача 1
+   
+   <h1>Задача 1</h1>
+<br> <br>
+    <pre>В следующем фрагменте программы выполните оптимизацию:
 
-   //Задача 2
-    var p = +prompt('Введите точность',4);
+for j := 1 to dim do
+begin
+    s1 := 0.0; s2 := 0.0; dt := 1.5;
+    x1[j] := 0; y1[j] :=0;
+
+    for k := 0 to bound do
+    begin
+        x1[j] := x1[j] + dt * mult1[k] * slope1[k, j];
+        y1[j] := y1[j] + dt * mult2[k] * slope2[j];
+    end;
+
+    error[j] := x1[j] - y1[j];
+end;</pre>
+    <br><br>
+    
+   <h2>Задача 2</h2><br> <br>
+    <pre>var p = +prompt('Введите точность',4);
    var mas = [];
    function pow(x, n) {
   if (n != 1) { 
@@ -17,8 +34,8 @@
   } else {
     return x;
   }
-};
-function f(n) {
+};</pre> <br> <br>
+<pre>function f(n) {
   return n ? n * f(n - 1) : 1;
 };
    for (n = 1; n < 5;n++) {
@@ -34,7 +51,7 @@ function f(n) {
    }
    
    var fix = result.toFixed (p);
-   alert(fix);
+   alert(fix);</pre>
    
    
 
@@ -42,6 +59,6 @@ function f(n) {
 
     
     
-   </script> 
+   
 </body>
 </html>
