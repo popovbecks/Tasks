@@ -5,11 +5,24 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="file" onchange="previewFile()" id="text">
-    //задача 1
-    <script>
-    //задача 2 
-    //Подключается файл text.txt
+   
+    <h1>задача 1</h1>
+        <p>Имеется следующее описание:</p>
+  <pre>var
+    a, b : Real;
+    c: Extended;
+    w: Integer;
+    m, n: Byte;</pre>
+<br> <br>
+    
+<p>Какие из этих переменных совместимы по присваиванию?</p>
+    <br>
+    <p>Ответ - Совместимы w,m,n так как Integer и Byte целочисленное значение, в отличии от Real и Extended, которые с 
+       плавающей точкой. Присваивание вещественного целому без явного округления невозможно. </p>
+    <h2>задача 2</h2><br>
+    
+    <p>Подключается файл text.txt</p>
+     <pre><input type="file" onchange="previewFile()" id="text">
      function previewFile() { 
         var reader = new FileReader();
         var str = "";
@@ -34,9 +47,9 @@
         }
         
 
-    }
+    }</pre>
     
   
-    </script>
+    
 </body>
 </html>
