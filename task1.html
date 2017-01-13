@@ -9,9 +9,10 @@
    //Задача 1
 
    //Задача 2
-   var p = +prompt('Введите точность',4);
+    var p = +prompt('Введите точность',4);
+   var mas = [];
    function pow(x, n) {
-  if (n != 1) { // пока n != 1, сводить вычисление pow(x,n) к pow(x,n-1)
+  if (n != 1) { 
     return x * pow(x, n - 1);
   } else {
     return x;
@@ -20,15 +21,19 @@
 function f(n) {
   return n ? n * f(n - 1) : 1;
 };
-
    for (n = 1; n < 5;n++) {
        var x = -2;
       var fact = f(n);
        var sum = pow (x, n)/pow (fact, n);
-       sum++;
+       mas.push(sum);
+       var result = mas.reduce(function(sum, current) {
+  return sum + current;
+}, 0);
+       
        
    }
-   var fix = sum.toFixed (p);
+   
+   var fix = result.toFixed (p);
    alert(fix);
    
    
