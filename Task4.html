@@ -5,8 +5,25 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h2>Задача 1</h2>
+    <br><br>
+<p>Определите результат выполнения следующей программы:</p>
 
+  <pre>program test3:
+  const
+    arChars : array[0..1] of Char = ('x', 'y');
+  type
+     TwoByte = array[0..1] of Byte;
+  var
+    Bool : Boolean;
+    TwoBytePtr : ^TwoByte;
+  begin
+    Bool := not False and True or False;
+    TwoBytePtr := @Bool;
+    Write (arChars[TwoBytePtr^[0]], ' ', arChars[TwoBytePtr^[1]]);
+    ReadLn;
+  end.</pre><br> <br>
+    <p>Ответ - выведет xFalse yTrue</p>
     <h1>Задача 2</h1>
     <pre>function compareNumeric(a, b) {
   return a - b;
