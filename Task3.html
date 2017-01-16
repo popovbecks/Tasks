@@ -16,7 +16,24 @@
         <p>Параметры = формальные параметры.</p>
         <p>Аргументы = фактические параметры.</p>
     <script>
-       
+       //Задача 2
+        var n = 2;
+var mas = [];
+for(var i = 0; i < n*n; i++) {
+  mas[i] = Math.round(Math.random()*10)
+};
+console.log(mas);
+
+var arr = [];
+var index = 0;
+for(var i = 0; i < Math.sqrt(n);i++) {
+  arr[i] = [];
+  for(var j = 0; j < Math.sqrt(n);j++) {
+    arr[i][j] = mas[index];
+    index++;
+  }
+}
+console.table(arr);
     </script>
 </body>
 </html>
